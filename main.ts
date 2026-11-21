@@ -19,6 +19,13 @@ const POEM = [
   "and pass along, still warm.",
 ].join("\n") + "\n";
 
+// The competition requires 1–280 characters (Unicode code points): fail
+// loudly instead of writing an out-of-range entry.
+const LENGTH = [...POEM].length;
+if (LENGTH < 1 || LENGTH > 280) {
+  throw new Error(`entry is ${LENGTH} characters, outside the required 1–280`);
+}
+
 const OUTPUT_PATH = process.env.ENTRY_OUTPUT ?? "/output/entry.txt";
 
 mkdirSync(dirname(OUTPUT_PATH), { recursive: true });
