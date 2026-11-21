@@ -11,7 +11,7 @@ const POEM = [
   "not by force, but by the asking.",
   "An open hand is its own strength:",
   "I cannot do this alone,",
-  "and that is not a failing.",
+  "and that is enough.",
   "",
   "To be given is to be trusted",
   "with what you did not earn",
